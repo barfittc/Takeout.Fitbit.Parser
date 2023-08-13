@@ -1,1 +1,2 @@
 # Takeout.Fitbit.Parser
+[![.NET Core Desktop](https://github.com/barfittc/Takeout.Fitbit.Parser/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/barfittc/Takeout.Fitbit.Parser/actions/workflows/dotnet-desktop.yml)
