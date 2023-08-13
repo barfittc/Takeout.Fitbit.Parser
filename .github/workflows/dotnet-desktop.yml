@@ -89,8 +89,8 @@ jobs:
 
     # Build App to bin/Release/Publish
     - name: Build and Publish Web App
-      run: msbuild $env:Solution_Name /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
-      #run: dotnet build Takeout.Fitbit.Parser.sln -o bin\Release\Publish
+      #run: msbuild $env:Solution_Name /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+      run: dotnet build Takeout.Fitbit.Parser.sln -o bin\Release\Publish
 
     # Upload App
     - name: Upload Artifact
