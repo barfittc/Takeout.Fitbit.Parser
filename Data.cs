@@ -125,13 +125,11 @@ namespace Takeout.Fitbit.Parser
             Dictionary<DateTime, float> organized = new Dictionary<DateTime, float>();
             foreach (var day in dayOfCalories.Keys)
             {
-                var start = sleepTime[day].Sleep;
-                var end = sleepTime[day].Awake;
-                var ratio = sleepTime[day].awakeRatio;
+                (var start, var end, var ratio) = sleepTime[day];
 
                 // calcuate all calories while sleeping
                 // multiply by awakeRatio
-                var basalMetabolicRate = dayOfCalories[day].Where(_ => _.When >= start && _.When <= end).Select(_ => _.Burnt).Sum() * ratio;
+                var basalMetabolicRate = dayOfCalories.SelectMany(_ => _.Value).Where(_ => _.When >= start && _.When <= end).Select(_ => _.Burnt).Sum() * ratio;
                 var totalBurnt = dayOfCalories[day].Select(_ => _.Burnt).Sum();
 
                 organized[day] = totalBurnt - basalMetabolicRate;
