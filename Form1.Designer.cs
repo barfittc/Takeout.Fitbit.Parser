@@ -28,404 +28,586 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Active Zone Minutes");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Avg Heart Rate");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("aoeaoeaoe");
-            this.label1 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            button2 = new Button();
+            label2 = new Label();
+            button3 = new Button();
+            button4 = new Button();
+            groupBox1 = new GroupBox();
+            checkBox24 = new CheckBox();
+            checkBox20 = new CheckBox();
+            checkBox10 = new CheckBox();
+            checkBox9 = new CheckBox();
+            checkBox7 = new CheckBox();
+            checkBox4 = new CheckBox();
+            checkBox12 = new CheckBox();
+            checkBox13 = new CheckBox();
+            checkBox16 = new CheckBox();
+            checkBox17 = new CheckBox();
+            checkBox18 = new CheckBox();
+            checkBox19 = new CheckBox();
+            checkBox22 = new CheckBox();
+            checkBox23 = new CheckBox();
+            checkBox11 = new CheckBox();
+            checkBox14 = new CheckBox();
+            checkBox15 = new CheckBox();
+            checkBox5 = new CheckBox();
+            checkBox6 = new CheckBox();
+            checkBox8 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            groupBox2 = new GroupBox();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
+            maskedTextBox1 = new MaskedTextBox();
+            progressBar1 = new ProgressBar();
+            label4 = new Label();
+            linkLabel1 = new LinkLabel();
+            textBox3 = new TextBox();
+            dateTimePicker2 = new DateTimePicker();
+            label5 = new Label();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Takeout zip File";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(87, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Takeout zip File";
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "TakeoutZipFile|*.zip";
+            // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.Filter = "Comma Seperated List|*.csv";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(185, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(415, 32);
+            button1.Name = "button1";
+            button1.Size = new Size(30, 23);
+            button1.TabIndex = 1;
+            button1.Text = "...";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += findZip_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 23);
-            this.textBox1.TabIndex = 2;
+            textBox1.Location = new Point(12, 32);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(403, 23);
+            textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 23);
-            this.textBox2.TabIndex = 5;
+            textBox2.Location = new Point(13, 150);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(402, 23);
+            textBox2.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(185, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(416, 150);
+            button2.Name = "button2";
+            button2.Size = new Size(30, 23);
+            button2.TabIndex = 4;
+            button2.Text = "...";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += saveAs_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Output csv File";
+            label2.AutoSize = true;
+            label2.Location = new Point(13, 132);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Output csv File";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(140, 105);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Run";
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Location = new Point(370, 179);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 6;
+            button3.Text = "Save";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += save_Click;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 105);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Reset";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(13, 179);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 7;
+            button4.Text = "Reset";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += reset_Click;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox10);
-            this.groupBox1.Controls.Add(this.checkBox12);
-            this.groupBox1.Controls.Add(this.checkBox13);
-            this.groupBox1.Controls.Add(this.checkBox16);
-            this.groupBox1.Controls.Add(this.checkBox17);
-            this.groupBox1.Controls.Add(this.checkBox18);
-            this.groupBox1.Controls.Add(this.checkBox19);
-            this.groupBox1.Controls.Add(this.checkBox21);
-            this.groupBox1.Controls.Add(this.checkBox22);
-            this.groupBox1.Controls.Add(this.checkBox23);
-            this.groupBox1.Controls.Add(this.checkBox11);
-            this.groupBox1.Controls.Add(this.checkBox14);
-            this.groupBox1.Controls.Add(this.checkBox15);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox8);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(221, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 245);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Columns to Include";
+            groupBox1.Controls.Add(checkBox24);
+            groupBox1.Controls.Add(checkBox20);
+            groupBox1.Controls.Add(checkBox10);
+            groupBox1.Controls.Add(checkBox9);
+            groupBox1.Controls.Add(checkBox7);
+            groupBox1.Controls.Add(checkBox4);
+            groupBox1.Controls.Add(checkBox12);
+            groupBox1.Controls.Add(checkBox13);
+            groupBox1.Controls.Add(checkBox16);
+            groupBox1.Controls.Add(checkBox17);
+            groupBox1.Controls.Add(checkBox18);
+            groupBox1.Controls.Add(checkBox19);
+            groupBox1.Controls.Add(checkBox22);
+            groupBox1.Controls.Add(checkBox23);
+            groupBox1.Controls.Add(checkBox11);
+            groupBox1.Controls.Add(checkBox14);
+            groupBox1.Controls.Add(checkBox15);
+            groupBox1.Controls.Add(checkBox5);
+            groupBox1.Controls.Add(checkBox6);
+            groupBox1.Controls.Add(checkBox8);
+            groupBox1.Controls.Add(checkBox3);
+            groupBox1.Controls.Add(checkBox2);
+            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Location = new Point(13, 208);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(606, 167);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Columns to Include";
+            // 
+            // checkBox24
+            // 
+            checkBox24.AutoSize = true;
+            checkBox24.Location = new Point(324, 121);
+            checkBox24.Name = "checkBox24";
+            checkBox24.Size = new Size(104, 19);
+            checkBox24.TabIndex = 27;
+            checkBox24.Text = "Active Calories";
+            checkBox24.UseVisualStyleBackColor = true;
+            checkBox24.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox20
+            // 
+            checkBox20.AutoSize = true;
+            checkBox20.Location = new Point(6, 45);
+            checkBox20.Name = "checkBox20";
+            checkBox20.Size = new Size(123, 19);
+            checkBox20.TabIndex = 26;
+            checkBox20.Text = "Resting Heart Rate";
+            checkBox20.UseVisualStyleBackColor = true;
+            checkBox20.CheckedChanged += includeCol_CheckedChanged;
             // 
             // checkBox10
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(179, 220);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(130, 19);
-            this.checkBox10.TabIndex = 22;
-            this.checkBox10.Text = "Minutes Very Active";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            checkBox10.AutoSize = true;
+            checkBox10.Location = new Point(179, 144);
+            checkBox10.Name = "checkBox10";
+            checkBox10.Size = new Size(71, 19);
+            checkBox10.TabIndex = 25;
+            checkBox10.Text = "Distance";
+            checkBox10.UseVisualStyleBackColor = true;
+            checkBox10.CheckedChanged += includeCol_CheckedChanged;
             // 
-            // checkBox12
+            // checkBox9
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(179, 170);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(98, 19);
-            this.checkBox12.TabIndex = 20;
-            this.checkBox12.Text = "Highest SpO2";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            checkBox9.AutoSize = true;
+            checkBox9.Location = new Point(179, 119);
+            checkBox9.Name = "checkBox9";
+            checkBox9.Size = new Size(58, 19);
+            checkBox9.TabIndex = 24;
+            checkBox9.Text = "Floors";
+            checkBox9.UseVisualStyleBackColor = true;
+            checkBox9.CheckedChanged += includeCol_CheckedChanged;
             // 
-            // checkBox13
+            // checkBox7
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(179, 195);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(94, 19);
-            this.checkBox13.TabIndex = 21;
-            this.checkBox13.Text = "Lowest SpO2";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(179, 95);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(129, 19);
-            this.checkBox16.TabIndex = 19;
-            this.checkBox16.Text = "Time Bellow Zone 1";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(179, 70);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(104, 19);
-            this.checkBox17.TabIndex = 18;
-            this.checkBox17.Text = "Time in Zone 3";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(179, 145);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(121, 19);
-            this.checkBox18.TabIndex = 16;
-            this.checkBox18.Text = "Lowest Heart Rate";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(179, 120);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(125, 19);
-            this.checkBox19.TabIndex = 14;
-            this.checkBox19.Text = "Highest Heart Rate";
-            this.checkBox19.UseVisualStyleBackColor = true;
-            // 
-            // checkBox21
-            // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(179, 120);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(86, 19);
-            this.checkBox21.TabIndex = 15;
-            this.checkBox21.Text = "Sleep Score";
-            this.checkBox21.UseVisualStyleBackColor = true;
-            // 
-            // checkBox22
-            // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(179, 20);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(104, 19);
-            this.checkBox22.TabIndex = 11;
-            this.checkBox22.Text = "Time in Zone 1";
-            this.checkBox22.UseVisualStyleBackColor = true;
-            // 
-            // checkBox23
-            // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(179, 45);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(104, 19);
-            this.checkBox23.TabIndex = 13;
-            this.checkBox23.Text = "Time In Zone 2";
-            this.checkBox23.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(6, 220);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(130, 19);
-            this.checkBox11.TabIndex = 10;
-            this.checkBox11.Text = "Minutes Very Active";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(6, 170);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(124, 19);
-            this.checkBox14.TabIndex = 6;
-            this.checkBox14.Text = "Minutes Sedentary";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(6, 195);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(136, 19);
-            this.checkBox15.TabIndex = 7;
-            this.checkBox15.Text = "Minutes Fairly Active";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(6, 95);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(54, 19);
-            this.checkBox5.TabIndex = 5;
-            this.checkBox5.Text = "SpO2";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(6, 70);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(135, 19);
-            this.checkBox6.TabIndex = 4;
-            this.checkBox6.Text = "Heart Rate Variability";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(6, 120);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(86, 19);
-            this.checkBox8.TabIndex = 2;
-            this.checkBox8.Text = "Sleep Score";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 145);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(144, 19);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Minutes Lightly Active";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            checkBox7.AutoSize = true;
+            checkBox7.Location = new Point(324, 95);
+            checkBox7.Name = "checkBox7";
+            checkBox7.Size = new Size(68, 19);
+            checkBox7.TabIndex = 23;
+            checkBox7.Text = "Calories";
+            checkBox7.UseVisualStyleBackColor = true;
+            checkBox7.CheckedChanged += includeCol_CheckedChanged;
             // 
             // checkBox4
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(6, 120);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(86, 19);
-            this.checkBox4.TabIndex = 2;
-            this.checkBox4.Text = "Sleep Score";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(324, 144);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(54, 19);
+            checkBox4.TabIndex = 22;
+            checkBox4.Text = "Steps";
+            checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox12
+            // 
+            checkBox12.AutoSize = true;
+            checkBox12.Enabled = false;
+            checkBox12.Location = new Point(324, 45);
+            checkBox12.Name = "checkBox12";
+            checkBox12.Size = new Size(98, 19);
+            checkBox12.TabIndex = 20;
+            checkBox12.Text = "Highest SpO2";
+            checkBox12.UseVisualStyleBackColor = true;
+            checkBox12.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox13
+            // 
+            checkBox13.AutoSize = true;
+            checkBox13.Enabled = false;
+            checkBox13.Location = new Point(324, 70);
+            checkBox13.Name = "checkBox13";
+            checkBox13.Size = new Size(94, 19);
+            checkBox13.TabIndex = 21;
+            checkBox13.Text = "Lowest SpO2";
+            checkBox13.UseVisualStyleBackColor = true;
+            checkBox13.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox16
+            // 
+            checkBox16.AutoSize = true;
+            checkBox16.Enabled = false;
+            checkBox16.Location = new Point(179, 22);
+            checkBox16.Name = "checkBox16";
+            checkBox16.Size = new Size(129, 19);
+            checkBox16.TabIndex = 19;
+            checkBox16.Text = "Time Bellow Zone 1";
+            checkBox16.UseVisualStyleBackColor = true;
+            checkBox16.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox17
+            // 
+            checkBox17.AutoSize = true;
+            checkBox17.Enabled = false;
+            checkBox17.Location = new Point(179, 95);
+            checkBox17.Name = "checkBox17";
+            checkBox17.Size = new Size(104, 19);
+            checkBox17.TabIndex = 18;
+            checkBox17.Text = "Time in Zone 3";
+            checkBox17.UseVisualStyleBackColor = true;
+            checkBox17.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox18
+            // 
+            checkBox18.AutoSize = true;
+            checkBox18.Enabled = false;
+            checkBox18.Location = new Point(6, 95);
+            checkBox18.Name = "checkBox18";
+            checkBox18.Size = new Size(121, 19);
+            checkBox18.TabIndex = 16;
+            checkBox18.Text = "Lowest Heart Rate";
+            checkBox18.UseVisualStyleBackColor = true;
+            checkBox18.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox19
+            // 
+            checkBox19.AutoSize = true;
+            checkBox19.Enabled = false;
+            checkBox19.Location = new Point(6, 70);
+            checkBox19.Name = "checkBox19";
+            checkBox19.Size = new Size(125, 19);
+            checkBox19.TabIndex = 14;
+            checkBox19.Text = "Highest Heart Rate";
+            checkBox19.UseVisualStyleBackColor = true;
+            checkBox19.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox22
+            // 
+            checkBox22.AutoSize = true;
+            checkBox22.Enabled = false;
+            checkBox22.Location = new Point(179, 45);
+            checkBox22.Name = "checkBox22";
+            checkBox22.Size = new Size(104, 19);
+            checkBox22.TabIndex = 11;
+            checkBox22.Text = "Time in Zone 1";
+            checkBox22.UseVisualStyleBackColor = true;
+            checkBox22.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox23
+            // 
+            checkBox23.AutoSize = true;
+            checkBox23.Enabled = false;
+            checkBox23.Location = new Point(179, 70);
+            checkBox23.Name = "checkBox23";
+            checkBox23.Size = new Size(104, 19);
+            checkBox23.TabIndex = 13;
+            checkBox23.Text = "Time In Zone 2";
+            checkBox23.UseVisualStyleBackColor = true;
+            checkBox23.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox11
+            // 
+            checkBox11.AutoSize = true;
+            checkBox11.Location = new Point(438, 95);
+            checkBox11.Name = "checkBox11";
+            checkBox11.Size = new Size(130, 19);
+            checkBox11.TabIndex = 10;
+            checkBox11.Text = "Minutes Very Active";
+            checkBox11.UseVisualStyleBackColor = true;
+            checkBox11.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox14
+            // 
+            checkBox14.AutoSize = true;
+            checkBox14.Location = new Point(438, 45);
+            checkBox14.Name = "checkBox14";
+            checkBox14.Size = new Size(124, 19);
+            checkBox14.TabIndex = 6;
+            checkBox14.Text = "Minutes Sedentary";
+            checkBox14.UseVisualStyleBackColor = true;
+            checkBox14.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox15
+            // 
+            checkBox15.AutoSize = true;
+            checkBox15.Location = new Point(438, 70);
+            checkBox15.Name = "checkBox15";
+            checkBox15.Size = new Size(136, 19);
+            checkBox15.TabIndex = 7;
+            checkBox15.Text = "Minutes Fairly Active";
+            checkBox15.UseVisualStyleBackColor = true;
+            checkBox15.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox5
+            // 
+            checkBox5.AutoSize = true;
+            checkBox5.Enabled = false;
+            checkBox5.Location = new Point(324, 22);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(100, 19);
+            checkBox5.TabIndex = 5;
+            checkBox5.Text = "Average SpO2";
+            checkBox5.UseVisualStyleBackColor = true;
+            checkBox5.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox6
+            // 
+            checkBox6.AutoSize = true;
+            checkBox6.Enabled = false;
+            checkBox6.Location = new Point(6, 121);
+            checkBox6.Name = "checkBox6";
+            checkBox6.Size = new Size(135, 19);
+            checkBox6.TabIndex = 4;
+            checkBox6.Text = "Heart Rate Variability";
+            checkBox6.UseVisualStyleBackColor = true;
+            checkBox6.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox8
+            // 
+            checkBox8.AutoSize = true;
+            checkBox8.Enabled = false;
+            checkBox8.Location = new Point(438, 120);
+            checkBox8.Name = "checkBox8";
+            checkBox8.Size = new Size(86, 19);
+            checkBox8.TabIndex = 2;
+            checkBox8.Text = "Sleep Score";
+            checkBox8.UseVisualStyleBackColor = true;
+            checkBox8.CheckedChanged += includeCol_CheckedChanged;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(438, 20);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(144, 19);
+            checkBox3.TabIndex = 3;
+            checkBox3.Text = "Minutes Lightly Active";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += includeCol_CheckedChanged;
             // 
             // checkBox2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 45);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 19);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Avg Heart Rate";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.AutoSize = true;
+            checkBox2.Enabled = false;
+            checkBox2.Location = new Point(6, 144);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(127, 19);
+            checkBox2.TabIndex = 1;
+            checkBox2.Text = "Average Heart Rate";
+            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += includeCol_CheckedChanged;
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 19);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Active Zone Minutes";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Enabled = false;
+            checkBox1.Location = new Point(6, 20);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(135, 19);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "Active Zone Minutes";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += includeCol_CheckedChanged;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Location = new System.Drawing.Point(553, 14);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(221, 243);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Order";
+            groupBox2.Controls.Add(listView1);
+            groupBox2.Location = new Point(451, 14);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(168, 198);
+            groupBox2.TabIndex = 9;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Column Order";
             // 
             // listView1
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.listView1.Location = new System.Drawing.Point(6, 17);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(209, 220);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
+            listView1.AllowDrop = true;
+            listView1.AutoArrange = false;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            listView1.FullRowSelect = true;
+            listView1.Location = new Point(6, 17);
+            listView1.MultiSelect = false;
+            listView1.Name = "listView1";
+            listView1.ShowGroups = false;
+            listView1.Size = new Size(155, 175);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.List;
+            listView1.ItemDrag += listView1_ItemDrag;
+            listView1.DragDrop += listView1_DragDrop;
+            listView1.DragEnter += listView1_DragEnter;
+            listView1.DragOver += listView1_DragOver;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Width = 1000;
+            columnHeader1.Width = 1000;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(11, 61);
+            label3.Name = "label3";
+            label3.Size = new Size(35, 15);
+            label3.TabIndex = 10;
+            label3.Text = "From";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Days", "Weeks", "Months" });
+            comboBox1.Location = new Point(94, 58);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(93, 23);
+            comboBox1.TabIndex = 11;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Location = new Point(52, 58);
+            maskedTextBox1.Mask = "000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.PromptChar = ' ';
+            maskedTextBox1.Size = new Size(36, 23);
+            maskedTextBox1.TabIndex = 13;
+            maskedTextBox1.ValidatingType = typeof(int);
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(94, 179);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(270, 23);
+            progressBar1.TabIndex = 14;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.Transparent;
+            label4.Location = new Point(148, 132);
+            label4.Name = "label4";
+            label4.Size = new Size(298, 15);
+            label4.TabIndex = 15;
+            label4.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(11, 90);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(72, 15);
+            linkLabel1.TabIndex = 17;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Date Format";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(94, 87);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(137, 23);
+            textBox3.TabIndex = 18;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Checked = false;
+            dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(256, 60);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.ShowCheckBox = true;
+            dateTimePicker2.Size = new Size(118, 23);
+            dateTimePicker2.TabIndex = 20;
+            dateTimePicker2.Value = new DateTime(2023, 8, 12, 19, 29, 29, 0);
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(196, 64);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 15);
+            label5.TabIndex = 21;
+            label5.Text = "OR Since";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 264);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Fitbit Google Takeout Converter";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(631, 387);
+            Controls.Add(label5);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(textBox3);
+            Controls.Add(linkLabel1);
+            Controls.Add(label4);
+            Controls.Add(progressBar1);
+            Controls.Add(maskedTextBox1);
+            Controls.Add(comboBox1);
+            Controls.Add(label3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(textBox2);
+            Controls.Add(button2);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
+            Controls.Add(button1);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Name = "Form1";
+            SizeGripStyle = SizeGripStyle.Hide;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Fitbit Google Takeout Converter";
+            Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -445,7 +627,6 @@
         private CheckBox checkBox5;
         private CheckBox checkBox6;
         private CheckBox checkBox3;
-        private CheckBox checkBox4;
         private CheckBox checkBox2;
         private CheckBox checkBox11;
         private CheckBox checkBox14;
@@ -464,5 +645,19 @@
         private GroupBox groupBox2;
         private ListView listView1;
         private ColumnHeader columnHeader1;
+        private Label label3;
+        private ComboBox comboBox1;
+        private MaskedTextBox maskedTextBox1;
+        private ProgressBar progressBar1;
+        private Label label4;
+        private CheckBox checkBox4;
+        private CheckBox checkBox9;
+        private CheckBox checkBox7;
+        private CheckBox checkBox20;
+        private CheckBox checkBox24;
+        private LinkLabel linkLabel1;
+        private TextBox textBox3;
+        private DateTimePicker dateTimePicker2;
+        private Label label5;
     }
 }
